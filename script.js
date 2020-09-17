@@ -21,6 +21,7 @@ window.onload = function () {
 
         posicaox += velocidadex
         posicaoy +=velocidadey
+
         if(posicaox <0){
             posicaox =quantidadePeca-1;
         }
@@ -35,28 +36,9 @@ window.onload = function () {
             posicaoy=0;
         }
         
-        cxt.fillStyle = "black"
+        cxt.fillStyle = "red";
         cxt.fillRect(0, 0, stage.Width, stage.height)
     }
 
-        cxt.fillStyle ="red"
-        cxt.fillRect(posicaoMacaX*tamanhoPeca,posicaoMacaY*tamanhoPeca, tamanhoPeca,tamanhoPeca)
-
-        cxt.fillStyle="purple"
-        for (let i = 0; i < trail.length; i++) {
-            cxt.fillRect(trail[i].x*lp, trail[i].y*tamanhoPeca, tamanhoPeca,tamanhoPeca)
-            if(trail[i].x == posicaox && trail[i].y==posicaoy)
-            {
-                velocidadex=0, velocidadey=0
-            }
-        }
-        trail.push({x:posicaox,y:posicaoy})
-        while(trail.length>tail){
-            trail.shift();
-        }
-        if(posicaoMacaX==posicaox&& posicaoMacaY==posicaoy){
-        tail++
-        posicaoMacaX =Math.floor(Math.random()*quantidadePeca)
-        posicaoMacaY =Math.floor(Math.random()*quantidadePeca)
-
+      
 }
