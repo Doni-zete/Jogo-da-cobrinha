@@ -10,7 +10,7 @@ window.onload = function () {
 
     let velocidadex, velocidadey = 0
     let posicaox, posicaoy = 10
-    let tamanhoPeca = 20
+    let larguraPeca = 20
     let quantidadePeca = 20
     let posicaoMacaX, posicaoMacaY = 15
 
