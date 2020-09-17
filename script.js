@@ -10,7 +10,7 @@ window.onload = function () {
 
     let velocidadex, velocidadey = 0
     let posicaox, posicaoy = 10
-    let larguraQuadrado = 20
+    let tamanhoPeca = 20
     let quantidadePeca = 20
     let posicaoMacaX, posicaoMacaY = 15
 
@@ -35,10 +35,28 @@ window.onload = function () {
             posicaoy=0;
         }
         
-
         cxt.fillStyle = "black"
-        cxt.fillRect(0, 0, stage.clientWidth, stage.height)
+        cxt.fillRect(0, 0, stage.Width, stage.height)
     }
 
+        cxt.fillStyle ="red"
+        cxt.fillRect(posicaoMacaX*tamanhoPeca,posicaoMacaY*tamanhoPeca, tamanhoPeca,tamanhoPeca)
+
+        cxt.fillStyle="purple"
+        for (let i = 0; i < trail.length; i++) {
+            cxt.fillRect(trail[i].x*lp, trail[i].y*tamanhoPeca, tamanhoPeca,tamanhoPeca)
+            if(trail[i].x == px && trail[i].y==posicaoy)
+            {
+                velocidadex,velocidadey=0;
+            }
+        }
+        trail.push({x:posicaox,y:posicaoy})
+        while(trail.length>trail){
+            trail.shift();
+        }
+        if(posicaoMacaX==posicaox&& posicaoMacaY==posicaoy)
+        tail++;
+        posicaoMacaY =Math.floor(Math.random()*quantidadePeca)
+        posicaoMacaY =Math.floor(Math.random()*quantidadePeca)
 
 }
