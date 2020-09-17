@@ -45,18 +45,18 @@ window.onload = function () {
         cxt.fillStyle="purple"
         for (let i = 0; i < trail.length; i++) {
             cxt.fillRect(trail[i].x*lp, trail[i].y*tamanhoPeca, tamanhoPeca,tamanhoPeca)
-            if(trail[i].x == px && trail[i].y==posicaoy)
+            if(trail[i].x == posicaox && trail[i].y==posicaoy)
             {
-                velocidadex,velocidadey=0;
+                velocidadex=0, velocidadey=0
             }
         }
         trail.push({x:posicaox,y:posicaoy})
-        while(trail.length>trail){
+        while(trail.length>tail){
             trail.shift();
         }
-        if(posicaoMacaX==posicaox&& posicaoMacaY==posicaoy)
-        tail++;
-        posicaoMacaY =Math.floor(Math.random()*quantidadePeca)
+        if(posicaoMacaX==posicaox&& posicaoMacaY==posicaoy){
+        tail++
+        posicaoMacaX =Math.floor(Math.random()*quantidadePeca)
         posicaoMacaY =Math.floor(Math.random()*quantidadePeca)
 
 }
