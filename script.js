@@ -36,6 +36,9 @@ window.onload = function () {
             posicaoy=0;
         }
         
+        cxt.fillStyle ="black"
+        cxt.fillRect(0,0, stage.Width, stage.height)
+
         cxt.fillStyle = "red";
         cxt.fillRect(0, 0, stage.Width, stage.height)
     }
