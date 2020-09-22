@@ -1,47 +1,31 @@
 window.onload = function () {
 
+    let stage = document.getElementById('stage');
+    let ctx = stage.getContext("2d");
 
-    let stage = document.getElementById('stage')
-    let cxt = stage.getContext("2d")
+    setInterval(game, 1000/15);
 
-    setInterval(game, 1000 / 15)
 
-    const vel = 1
+    const vel = 1;
 
-    let velocidadex, velocidadey = 0
-    let posicaox, posicaoy = 10
-    let larguraPeca = 20
-    let quantidadePeca = 20
-    let posicaoMacaX, posicaoMacaY = 15
+    let velocidadeX = 0;
+    let velocidadeY = 0;
 
-    let trail=[]
-    tail = 5
 
-    function game() {
 
-        posicaox += velocidadex
-        posicaoy +=velocidadey
+    function game(){
 
-        if(posicaox <0){
-            posicaox =quantidadePeca-1;
-        }
-        if (posicaox > quantidadePeca-1){
-            posicaox =0;
-        }
-        if(posicaoy<0){
-            posicaoy=quantidadePeca-1;
 
-        }
-        if(posicaoy>quantidadePeca-1){
-            posicaoy=0;
-        }
-        
-        cxt.fillStyle ="black"
-        cxt.fillRect(0,0, stage.Width, stage.height)
-
-        cxt.fillStyle = "red";
-        cxt.fillRect(0, 0, stage.Width, stage.height)
     }
 
-      
+
+
+
+
+
+
+    
+    ctx.fillStyle = "purple";
+    ctx.fillRect(0,0, stage.width, stage.height);
+
 }
