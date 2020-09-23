@@ -1,7 +1,7 @@
 window.onload = function () {
 
     let stage = document.getElementById('stage');
-    let ctx = stage.getContext("2d");
+    let context = stage.getContext("2d");
 
     setInterval(game, 60);
 
@@ -14,33 +14,39 @@ window.onload = function () {
     let posicaoy = 15;
     let tamanho = 20;
     let quantidadePeca = 20;
-    let macaX= 15;
-    let macaY= 15;
+    let macaX = 15;
+    let macaY = 15;
 
     let trail = [];
     tail = 5;
 
-    function game(){
+    function game() {
         posicaox += velocidadeX;
         posicaoy += velocidadeY;
-        if(posicaox <0){
-            posicaox = quantidadePeca-1; 
+        if (posicaox < 0) {
+            posicaox = quantidadePeca - 1;
         }
-        if (posicaox> quantidadePeca-1){
+        if (posicaox > quantidadePeca - 1) {
             posicaox = 0;
         }
-        if(posicaoy < 0){
-            posicaoy = quantidadePeca-1;
+        if (posicaoy < 0) {
+            posicaoy = quantidadePeca - 1;
         }
-        if (posicaoy> quantidadePeca-1){
+        if (posicaoy > quantidadePeca - 1) {
             posicaoy = 0;
         }
 
-    
-    ctx.fillStyle = "purple";
-    ctx.fillRect(0,0, stage.width, stage.height);
 
-    ctx.fillStyle = "red";
-    ctx.fillRect(macaX*tamanho, macaY*tamanho, tamanho,tamanho);
-}
+        context.fillStyle = "purple";
+        context.fillRect(0, 0, stage.width, stage.height);
+
+        context.fillStyle = "red";
+        context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
+
+        context.fillStyle = "gray"
+        for (let i= 0; i <trail.length; i++) {
+            context.fillRect(trail[i].x=tamanho, trail[i].y*tamanho)
+           
+        }
+    }
 }
