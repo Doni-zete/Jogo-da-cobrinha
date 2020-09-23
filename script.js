@@ -2,8 +2,8 @@ window.onload = function () {
 
     let stage = document.getElementById('stage');
     let context = stage.getContext("2d");
-    document.addEventListener("keypress", keypush);
-    setInterval(game, 60);
+    document.addEventListener("keydown", keyPush);
+    setInterval(game, 100);
 
 
     const vel = 1;
@@ -13,12 +13,12 @@ window.onload = function () {
     let posicaox = 10;
     let posicaoy = 15;
     let tamanho = 20;
-    let quantidadePeca = 20;
-    let macaX = 15;
-    let macaY = 15;
+    let quantidadePeca = 30;
+    let macaX =macaY= 15;
+ 
 
     let trail = [];
-    tail = 5;
+    tail = 3;
 
     function game() {
         posicaox += velocidadeX;
@@ -45,12 +45,13 @@ window.onload = function () {
 
         context.fillStyle = "gray"
         for (let i = 0; i < trail.length; i++) {
-            context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho, tamanho)
+            context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho-1, tamanho-1)
 
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
                 velocidadeY = 0;
-                window.alert = 'Game over';
+                tail = 5;
+                
 
             }
         }
@@ -69,8 +70,9 @@ window.onload = function () {
         }
     }
 
-    function keypush() {
-        switch (Event.keyCode) {
+    function keyPush(event) {
+
+        switch (event.keyCode) {
             case 37:
                 velocidadeX = -vel;
                 velocidadeY = 0;
@@ -96,7 +98,7 @@ window.onload = function () {
         }
 
     }
+
+
+
 }
-
-
-
