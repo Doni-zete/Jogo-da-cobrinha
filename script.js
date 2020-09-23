@@ -13,7 +13,7 @@ window.onload = function () {
     let posicaox = 10;
     let posicaoy = 15;
     let tamanho = 20;
-    let quantidade = 20;
+    let quantidadePeca = 20;
     let macaX= 15;
     let macaY= 15;
 
@@ -22,18 +22,18 @@ window.onload = function () {
 
     function game(){
         posicaox += velocidadeX;
-        py += vY;
-        if(px <0){
-            px = qp-1; 
+        posicaoy += velocidadeY;
+        if(posicaox <0){
+            posicaox = quantidadePeca-1; 
         }
-        if (px> qp-1){
-            px = 0;
+        if (posicaox> quantidadePeca-1){
+            posicaox = 0;
         }
-        if(py < 0){
-            py = qp-1;
+        if(posicaoy < 0){
+            posicaoy = quantidadePeca-1;
         }
-        if (py> qp-1){
-            py = 0;
+        if (posicaoy> quantidadePeca-1){
+            posicaoy = 0;
         }
 
     
@@ -41,6 +41,6 @@ window.onload = function () {
     ctx.fillRect(0,0, stage.width, stage.height);
 
     ctx.fillStyle = "red";
-    ctx.fillRect(ax*tp, ay*tp, tp,tp);
+    ctx.fillRect(macaX*tamanho, macaY*tamanho, tamanho,tamanho);
 }
 }
