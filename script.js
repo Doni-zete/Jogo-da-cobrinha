@@ -44,9 +44,28 @@ window.onload = function () {
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
         context.fillStyle = "gray"
-        for (let i= 0; i <trail.length; i++) {
-            context.fillRect(trail[i].x=tamanho, trail[i].y*tamanho)
-           
+        for (let i = 0; i < trail.length; i++) {
+            context.fillRect(trail[i].x = tamanho, trail[i].y * tamanho, tamanho, tamanho)
+
+            if (trail[i].x == posicaox && trail[i].y == posicaoy) {
+                velocidadeX = 0;
+                velocidadeY = 0;
+                window.alert = 'Game over';
+
+            }
+        }
+        trail.push({ x: posicaox, y: posicaoy })
+        while (trail.length > tail) {
+            trail.shift();
+
+        }
+
+        if (macaX == posicaox && macaY == posicaoy) {
+            tail++;
+            macaX = Math.floor(Math.random()*tamanho);
+            macaY = Math.floor(Math.random()*tamanho);
+
+
         }
     }
 }
