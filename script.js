@@ -8,20 +8,20 @@ window.onload = function () {
 
     const vel = 1;
 
-    let vX = 0;
-    let vY = 0;
-    let px = 10;
-    let py = 15;
-    let lp = 20;
-    let qp = 20;
-    let ax= 15;
-    let ay= 15;
+    let velocidadeX = 0;
+    let velocidadeY = 0;
+    let posicaox = 10;
+    let posicaoy = 15;
+    let tamanho = 20;
+    let quantidade = 20;
+    let macaX= 15;
+    let macaY= 15;
 
     let trail = [];
     tail = 5;
 
     function game(){
-        px += vX;
+        posicaox += velocidadeX;
         py += vY;
         if(px <0){
             px = qp-1; 
@@ -35,19 +35,12 @@ window.onload = function () {
         if (py> qp-1){
             py = 0;
         }
-    
-    
-
-   
-
-
-
-
-
-
 
     
     ctx.fillStyle = "purple";
     ctx.fillRect(0,0, stage.width, stage.height);
+
+    ctx.fillStyle = "red";
+    ctx.fillRect(ax*tp, ay*tp, tp,tp);
 }
 }
