@@ -51,6 +51,7 @@ window.onload = function () {
                 velocidadeX = 0;
                 velocidadeY = 0;
                 tail = 5;
+                window.prompt ="Game over"
                 
 
             }
