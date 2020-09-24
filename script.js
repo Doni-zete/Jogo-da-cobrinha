@@ -50,11 +50,12 @@ window.onload = function () {
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
                 velocidadeY = 0;
-                tail = 3;
-                inn.prompt =`Game over`
                 
-
+                    
+                
+                
             }
+            
         }
         trail.push({ x: posicaox, y: posicaoy })
         while (trail.length > tail) {
