@@ -3,7 +3,7 @@ window.onload = function () {
     let stage = document.getElementById('stage');
     let context = stage.getContext("2d");
     document.addEventListener("keydown", keyPush);
-    setInterval(game, 100);
+    setInterval(game, 160);
 
 
     const vel = 1;
@@ -50,9 +50,6 @@ window.onload = function () {
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
                 velocidadeY = 0;
-                
-                    
-                
                 
             }
             
