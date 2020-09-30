@@ -3,7 +3,7 @@ window.onload = function () {
     let stage = document.getElementById('stage');
     let context = stage.getContext("2d");
     document.addEventListener("keydown", keyPush);
-    setInterval(game, 160);
+    setInterval(game, 60);
 
 
     const vel = 1;
