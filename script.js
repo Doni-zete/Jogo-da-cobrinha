@@ -3,7 +3,7 @@ window.onload = function () {
     let stage = document.getElementById('stage');
     let context = stage.getContext("2d");
     document.addEventListener("keydown", keyPush);
-    setInterval(game, 60);
+    setInterval(game, 90);
 
 
     const vel = 1;
@@ -43,10 +43,10 @@ window.onload = function () {
         context.fillStyle = "red";
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
-        context.fillStyle = "white"
+        context.fillStyle = "blue"
         for (let i = 0; i < trail.length; i++) {
             context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho-1, tamanho-1)
-
+            context.fillStyle = "white"
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
                 velocidadeY = 0;
