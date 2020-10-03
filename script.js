@@ -43,7 +43,7 @@ window.onload = function () {
         context.fillStyle = "red";
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
-        context.fillStyle = "gray"
+        context.fillStyle = "white"
         for (let i = 0; i < trail.length; i++) {
             context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho-1, tamanho-1)
 
