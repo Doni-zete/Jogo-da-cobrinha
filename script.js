@@ -40,12 +40,15 @@ window.onload = function () {
         context.fillStyle = "purple";
         context.fillRect(0, 0, stage.width, stage.height);
 
-        context.fillStyle = "red";
+
+        context.fillStyle = "green";
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
-        context.fillStyle = "blue"
+        
+
+        
         for (let i = 0; i < trail.length; i++) {
-            context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho-1, tamanho-1)
+            context.fillRect(trail[i].x*tamanho, trail[i].y * tamanho, tamanho -1, tamanho -1)
             context.fillStyle = "white"
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
@@ -54,6 +57,10 @@ window.onload = function () {
             }
             
         }
+        
+        
+
+
         trail.push({ x: posicaox, y: posicaoy })
         while (trail.length > tail) {
             trail.shift();
