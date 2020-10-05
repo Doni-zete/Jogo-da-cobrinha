@@ -41,7 +41,7 @@ window.onload = function () {
         context.fillRect(0, 0, stage.width, stage.height);
 
 
-        context.fillStyle = "green";
+        context.fillStyle = "red";
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
         
@@ -53,6 +53,9 @@ window.onload = function () {
             if (trail[i].x == posicaox && trail[i].y == posicaoy) {
                 velocidadeX = 0;
                 velocidadeY = 0;
+                        
+
+          console.log("YOU LOSE!");
                 
             }
             
