@@ -41,7 +41,7 @@ window.onload = function () {
         context.fillRect(0, 0, stage.width, stage.height);
 
 
-        context.fillStyle = "red";
+        context.fillStyle = "blue";
         context.fillRect(macaX * tamanho, macaY * tamanho, tamanho, tamanho);
 
         
