@@ -55,7 +55,7 @@ window.onload = function () {
                 velocidadeY = 0;
                         
 
-          console.log("YOU LOSE!");
+          console.log("YOU LOSE");
                 
             }
             
